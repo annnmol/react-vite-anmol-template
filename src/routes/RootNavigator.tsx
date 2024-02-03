@@ -6,7 +6,7 @@ import PublicRoutes from "./PublicRoutes";
 const RootNavigator = () => {
   const { authUser } = useAppSelector(authUserStore);
 
-  if (authUser?.name) {
+  if (authUser?.username) {
     return <ProtectedRoutes />;
   } else {
     return <PublicRoutes />;

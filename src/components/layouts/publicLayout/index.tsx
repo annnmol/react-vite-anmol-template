@@ -4,8 +4,7 @@ import { LayoutContentWrap, LayoutWrap } from "../layoutStyles";
 const PublicLayout = () => {
   return (
     <LayoutWrap>
-      {/* <LayoutTopMenuWrap> Import here</LayoutTopMenuWrap> */}
-      <LayoutContentWrap style={{height:'100vh', marginTop:0}}>
+      <LayoutContentWrap >
         <Outlet />
       </LayoutContentWrap>
     </LayoutWrap>
@@ -13,4 +12,3 @@ const PublicLayout = () => {
 };
 
 export default PublicLayout;
-

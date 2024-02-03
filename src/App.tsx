@@ -12,7 +12,6 @@ const App: React.FC = () => {
       <BrowserRouter>
       <Provider store={store}>
         <RootNavigator />
-        {/* <Dashboard /> */}
       </Provider>
       </BrowserRouter>
     </>

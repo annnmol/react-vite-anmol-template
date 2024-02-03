@@ -7,7 +7,7 @@ import {
 
 interface AppButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "outline" | "text";
-  fontSize?: Number;
+  fontSize?: number;
   children: React.ReactNode;
   [otherProps: string]: any;
 }
@@ -19,7 +19,7 @@ const AppButton: React.FC<AppButtonProps> = ({
 }) => {
   if (variant === "outline") {
     return (
-      <StyledAppButtonOutline variant={variant} fontSize={fontSize} {...otherProps}>
+      <StyledAppButtonOutline $variant={variant} $fontSize={fontSize} {...otherProps}>
         {children}
       </StyledAppButtonOutline>
     );
@@ -27,7 +27,7 @@ const AppButton: React.FC<AppButtonProps> = ({
 
   if (variant === "text") {
     return (
-      <StyledAppButtonText variant={variant} fontSize={fontSize} {...otherProps}>
+      <StyledAppButtonText $variant={variant} $fontSize={fontSize} {...otherProps}>
         {children}
       </StyledAppButtonText>
     );
@@ -35,7 +35,7 @@ const AppButton: React.FC<AppButtonProps> = ({
 
   // default primary
   return (
-    <StyledAppButtonPrimary variant={variant} fontSize={fontSize} {...otherProps}>
+    <StyledAppButtonPrimary $variant={variant} $fontSize={fontSize} {...otherProps}>
       {children}
     </StyledAppButtonPrimary>
   );
